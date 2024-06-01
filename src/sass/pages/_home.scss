@@ -1,0 +1,47 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero {
+    position: relative; /* Essentiel pour positionner le pseudo-élément */
+    background: url('../../src/app/assets/banner.svg') center/cover no-repeat;
+    height: 200px;
+    width: 90%;
+    border-radius: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden; /* Assure que le voile reste à l'intérieur des bordures arrondies */
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    z-index: 2; /* Assure que le contenu reste en-dessous du pseudo-élément */
+}
+
+.hero::before {
+    content: ""; /* Nécessaire pour que le pseudo-élément s'affiche */
+    position: absolute; /* Positionnement par rapport au conteneur relatif */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Couleur noire avec une opacité de 50% */
+    border-radius: inherit; /* Hérite la bordure arrondie du parent */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    z-index: 1; /* Assure que le contenu reste au-dessus du pseudo-élément */
+}
+
+  /* Small devices (phones, less than 768px) */
+  @media (max-width: 767.98px) {
+    .hero{
+        border-radius: 10px;
+    }
+    .hero h1{
+        text-align: left;
+        margin-left: 20px;
+    }
+  }

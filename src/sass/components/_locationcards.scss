@@ -1,0 +1,44 @@
+.locations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: auto;
+    background-color: #f6f6f6;
+    padding: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+    margin-top: 50px;
+  }
+  
+  .location-card {
+    width:30%;
+    cursor: pointer;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #FF6060;
+    box-sizing: border-box;
+  }
+
+  .location-card img {
+    max-width: 100%;
+    height: auto; // Maintient le ratio de l'image
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .locations-container{
+        padding: 0;
+        background-color: white;
+    }
+
+    .location-card {
+        width:100%;
+        margin:0;
+        margin-bottom: 30px;
+      }
+    
+    }

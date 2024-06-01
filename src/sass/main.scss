@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import "base/_base";
 @import 'pages/_home';
-
-
+@import 'components/header';
+@import 'components/footer';
+@import 'components/locationcards';

@@ -1,0 +1,113 @@
+
+.location-details-content {
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+  
+    .info-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 20px;
+  
+      .info-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+  
+        h1 {
+          color: #FF6060;
+        }
+  
+        .location {
+          font-weight: bold;
+          margin-top: 10px;
+        }
+  
+        .tags {
+            display: flex;
+            gap: 10px;
+          margin-top: 10px;
+  
+          .tag {
+            
+            
+            background-color: #FF6060;
+            color: #FFFFFF;
+            font-weight: bold;
+            border-radius: 10px;
+            padding: 5px 20px;
+            
+          }
+        }
+      }
+  
+      .info-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+  
+        .host-info {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+  
+          img {
+            border-radius: 50%;
+          }
+          p {
+            color: #FF6060;
+            margin-right: 20px;
+          }
+        }
+  
+        .rating {
+          margin-top: 10px;
+          font-size: 20px;
+        }
+      }
+    }
+  
+    
+  }
+ 
+  /* Mobile styles */
+  @media (max-width: 767.98px) {
+    .location-details-content { 
+    
+    .info-container {
+      flex-direction: column;
+      .location {
+        margin-bottom:10px;
+      }
+      .info-left, .info-right {
+        width: 100%;
+      }
+
+      .info-right {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+
+        .host-info, .rating {
+          margin: 0;
+        }
+
+        .rating {
+          margin-left: 10px;
+          .fa-star {
+            font-size: 0.7em;
+          }
+        }
+        .host-info {
+          img {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+  }

@@ -1,0 +1,19 @@
+.rating-stars {
+    display: flex;
+    font-size: 1.5em;
+    color: #FF6060;
+    border: none;
+  
+    .fa-star {
+      margin-right: 5px; // Espace entre les étoiles
+    }
+  
+    .fas {
+      color: #FF6060; // Couleur des étoiles remplies
+    }
+  
+    .far.empty {
+      color: #ccc; // Couleur des étoiles vides
+    }
+  }
+  

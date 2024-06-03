@@ -2,12 +2,12 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../css/style.css';
 
-function LocationCard({ location }) {
+function Card({ location }) {
   const navigate = useNavigate();
 
   // Fonction pour gérer le clic sur une carte
   const handleCardClick = () => {
-    navigate('/some-path');
+    navigate(`/location/${location.id}`);
   };
 
   return (
@@ -18,4 +18,4 @@ function LocationCard({ location }) {
   );
 }
 
-export default LocationCard;
+export default Card;

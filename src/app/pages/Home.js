@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
-import LocationCard from '../components/LocationCard';
+import Card from '../components/Card';
 import '../../css/style.css';
 import Footer from '../components/Footer';
 
@@ -28,7 +28,7 @@ function Home () {
             </div>
             <div className="locations-container">
         {locations.map(location => (
-          <LocationCard key={location.id} location={location} />
+          <Card key={location.id} location={location} />
         ))}
       </div>
       <Footer />

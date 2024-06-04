@@ -10,9 +10,9 @@ const Collapse = ({ title, children }) => {
 
   return (
     <div className="collapse">
-      <div className="collapse-header" onClick={toggleCollapse}>
-        <h3>{title}</h3>
-        <span className="collapse-icon">
+      <div className="collapse-header">
+        <h2>{title}</h2>
+        <span className="collapse-icon" onClick={toggleCollapse}>
           <i className={`fas fa-chevron-${isOpen ? 'down' : 'up'}`}></i>
         </span>
       </div>

@@ -2,9 +2,10 @@
 .collapse-container {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 
   .collapse {
-    margin: 20px 0;
+    margin: 10px 0;
     width: 45%;
   
     .collapse-header {
@@ -15,14 +16,12 @@
       padding: 0px 10px;
       color: #FFFFFF;
       border-radius: 10px;
-      cursor: pointer;
-  
       h2 {
-        margin: 0;
+        font-size: 20px;
       }
-  
       .collapse-icon {
-        font-size: 1.5em;
+        font-size: 30px;
+        cursor: pointer;
       }
     }
   

@@ -51,6 +51,99 @@ body {
     margin-left: 20px;
   }
 }
+.location-details-content {
+  padding: 20px;
+  width: 90%;
+  margin: auto;
+}
+.location-details-content .info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.location-details-content .info-container .info-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.location-details-content .info-container .info-left h1 {
+  color: #FF6060;
+  margin-top: 10px;
+}
+.location-details-content .info-container .info-left .location {
+  font-weight: bold;
+  margin-top: 20px;
+}
+.location-details-content .info-container .info-left .tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.location-details-content .info-container .info-left .tags .tag {
+  background-color: #FF6060;
+  color: #FFFFFF;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 5px 20px;
+}
+.location-details-content .info-container .info-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.location-details-content .info-container .info-right .host-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+.location-details-content .info-container .info-right .host-info img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+.location-details-content .info-container .info-right .host-info p {
+  color: #FF6060;
+  margin-right: 20px;
+}
+.location-details-content .info-container .info-right .rating {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Mobile styles */
+@media (max-width: 767.98px) {
+  .location-details-content .info-container {
+    flex-direction: column;
+  }
+  .location-details-content .info-container .location {
+    margin-bottom: 10px;
+  }
+  .location-details-content .info-container .info-left, .location-details-content .info-container .info-right {
+    width: 100%;
+  }
+  .location-details-content .info-container .info-right {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .location-details-content .info-container .info-right .host-info, .location-details-content .info-container .info-right .rating {
+    margin: 0;
+  }
+  .location-details-content .info-container .info-right .rating {
+    margin-left: 10px;
+  }
+  .location-details-content .info-container .info-right .rating .fa-star {
+    font-size: 0.7em;
+  }
+  .location-details-content .info-container .info-right .host-info img {
+    width: 50px;
+    height: 50px;
+  }
+}
 header {
   display: flex;
   align-items: center;
@@ -107,7 +200,7 @@ footer p {
 .locations-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 90%;
   margin: auto;
   background-color: #f6f6f6;
@@ -119,9 +212,11 @@ footer p {
 }
 
 .location-card {
+  display: flex;
+  flex-direction: column;
   width: 30%;
   cursor: pointer;
-  margin: 20px;
+  margin: 20px 0;
   border-radius: 10px;
   background-color: #FF6060;
   box-sizing: border-box;
@@ -134,6 +229,7 @@ footer p {
 }
 .location-card h2 {
   margin-left: 20px;
+  font-size: 16px;
 }
 
 /* Small devices (phones, less than 768px) */
@@ -188,9 +284,10 @@ footer p {
 .collapse-container {
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
 }
 .collapse-container .collapse {
-  margin: 20px 0;
+  margin: 10px 0;
   width: 45%;
 }
 .collapse-container .collapse .collapse-header {
@@ -201,13 +298,13 @@ footer p {
   padding: 0px 10px;
   color: #FFFFFF;
   border-radius: 10px;
-  cursor: pointer;
 }
 .collapse-container .collapse .collapse-header h2 {
-  margin: 0;
+  font-size: 20px;
 }
 .collapse-container .collapse .collapse-header .collapse-icon {
-  font-size: 1.5em;
+  font-size: 30px;
+  cursor: pointer;
 }
 .collapse-container .collapse .collapse-content {
   padding: 15px;
@@ -257,96 +354,6 @@ footer p {
 }
 .rating-stars .far.empty {
   color: #ccc;
-}
-
-.location-details-content {
-  padding: 20px;
-  width: 90%;
-  margin: auto;
-}
-.location-details-content .info-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 20px;
-}
-.location-details-content .info-container .info-left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-.location-details-content .info-container .info-left h1 {
-  color: #FF6060;
-}
-.location-details-content .info-container .info-left .location {
-  font-weight: bold;
-  margin-top: 10px;
-}
-.location-details-content .info-container .info-left .tags {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-.location-details-content .info-container .info-left .tags .tag {
-  background-color: #FF6060;
-  color: #FFFFFF;
-  font-weight: bold;
-  border-radius: 10px;
-  padding: 5px 20px;
-}
-.location-details-content .info-container .info-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.location-details-content .info-container .info-right .host-info {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.location-details-content .info-container .info-right .host-info img {
-  border-radius: 50%;
-}
-.location-details-content .info-container .info-right .host-info p {
-  color: #FF6060;
-  margin-right: 20px;
-}
-.location-details-content .info-container .info-right .rating {
-  margin-top: 10px;
-  font-size: 20px;
-}
-
-/* Mobile styles */
-@media (max-width: 767.98px) {
-  .location-details-content .info-container {
-    flex-direction: column;
-  }
-  .location-details-content .info-container .location {
-    margin-bottom: 10px;
-  }
-  .location-details-content .info-container .info-left, .location-details-content .info-container .info-right {
-    width: 100%;
-  }
-  .location-details-content .info-container .info-right {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 40px;
-  }
-  .location-details-content .info-container .info-right .host-info, .location-details-content .info-container .info-right .rating {
-    margin: 0;
-  }
-  .location-details-content .info-container .info-right .rating {
-    margin-left: 10px;
-  }
-  .location-details-content .info-container .info-right .rating .fa-star {
-    font-size: 0.7em;
-  }
-  .location-details-content .info-container .info-right .host-info img {
-    width: 50px;
-    height: 50px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

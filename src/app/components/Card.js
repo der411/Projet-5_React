@@ -1,21 +1,22 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../../css/style.css';
+import {Link} from "react-router-dom";
 
-function Card({ location }) {
-  const navigate = useNavigate();
 
-  // Fonction pour gérer le clic sur une carte
-  const handleCardClick = () => {
-    navigate(`/location/${location.id}`);
-  };
+function Card({location}) {
 
-  return (
-    <div className="location-card" onClick={handleCardClick}>
-      <img src={location.cover} alt={location.title} className="location-cover" />
-      <h2>{location.title}</h2>
-    </div>
-  );
+    return (
+        <Link to={`/location/${location.id}`} className="location-link">
+            <div className="location-card">
+                <img src={location.cover} alt={location.title} className="location-cover"/>
+                <h2>{location.title}</h2>
+            </div>
+        </Link>
+    );
 }
 
 export default Card;
+
+
+
+
+  

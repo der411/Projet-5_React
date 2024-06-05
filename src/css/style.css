@@ -202,19 +202,23 @@ footer p {
   flex-wrap: wrap;
   justify-content: space-around;
   width: 90%;
-  margin: auto;
   background-color: #f6f6f6;
   padding: 20px;
   border-radius: 20px;
   box-sizing: border-box;
   color: #ffffff;
-  margin-top: 50px;
+  margin: 50px auto auto;
+}
+
+.locations-container .location-link {
+  display: flex;
+  text-decoration: none;
 }
 
 .location-card {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 27%;
   cursor: pointer;
   margin: 20px 0;
   border-radius: 10px;
@@ -223,7 +227,6 @@ footer p {
 }
 .location-card img {
   max-width: 100%;
-  height: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -236,12 +239,10 @@ footer p {
 @media (max-width: 767.98px) {
   .locations-container {
     padding: 0;
-    background-color: white;
+    background-color: #ffffff;
   }
   .location-card {
-    width: 100%;
-    margin: 0;
-    margin-bottom: 30px;
+    flex-basis: 100%;
   }
 }
 .slideshow {
@@ -260,7 +261,7 @@ footer p {
 .slideshow .slideshow-button {
   position: absolute;
   top: 40%;
-  color: white;
+  color: #ffffff;
   background: none;
   border: none;
   padding: 10px;
@@ -276,7 +277,7 @@ footer p {
 .slideshow .slideshow-indicator {
   position: absolute;
   bottom: 10px;
-  color: white;
+  color: #ffffff;
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -295,7 +296,7 @@ footer p {
   justify-content: space-between;
   align-items: center;
   background-color: #FF6060;
-  padding: 0px 10px;
+  padding: 0 10px;
   color: #FFFFFF;
   border-radius: 10px;
 }

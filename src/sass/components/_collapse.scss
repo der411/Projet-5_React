@@ -1,70 +1,70 @@
-
 .collapse-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 
   .collapse {
-    margin: 10px 0;
-    width: 45%;
-  
-    .collapse-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #FF6060;
-      padding: 0px 10px;
-      color: #FFFFFF;
-      border-radius: 10px;
-      h2 {
-        font-size: 20px;
-      }
-      .collapse-icon {
-        font-size: 30px;
-        cursor: pointer;
-      }
-    }
-  
-    .collapse-content {
-      padding: 15px;
-      background-color: #fbfbfb;
+      margin: 10px 0;
+      width: 45%;
 
-      ul, ol {
-        list-style-type: none;
-        padding-left: 0;
-  
-        li {
-          padding-left: 0;
-        }
+      .collapse-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: $color-danger;
+          padding: 0 10px;
+          color: #FFFFFF;
+          border-radius: 10px;
+
+          h2 {
+              font-size: 20px;
+          }
+
+          .collapse-icon {
+              font-size: 30px;
+              cursor: pointer;
+          }
       }
-    }
+
+      .collapse-content {
+          padding: 15px;
+          background-color: #fbfbfb;
+
+          ul, ol {
+              list-style-type: none;
+              padding-left: 0;
+
+              li {
+                  padding-left: 0;
+              }
+          }
+      }
   }
 }
- 
-  
-  .equipments {
-    margin-top: 20px;
-  
-    ul {
+
+.equipments {
+  margin-top: 20px;
+
+  ul {
       list-style: none;
       padding: 0;
-  
-      li {
-        background-color: #f1f1f1;
-        margin: 5px 0;
-        padding: 10px;
-        border-radius: 5px;
-      }
-    }
-  }
-  
 
-  @media (max-width: 767.98px) {
-    .collapse-container {
-      flex-direction: column;
-  
-      .collapse {
-        width: 100%;
+      li {
+          background-color: #f1f1f1;
+          margin: 5px 0;
+          padding: 10px;
+          border-radius: 5px;
       }
-    }
   }
+}
+
+
+@media (max-width: 767.98px) {
+  .collapse-container {
+      flex-direction: column;
+
+      .collapse {
+          width: 100%;
+      }
+  }
+}

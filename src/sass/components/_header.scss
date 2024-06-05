@@ -9,44 +9,44 @@ header {
 
 nav {
   ul {
-    list-style-type: none;
-    padding: 0;
+      list-style-type: none;
+      padding: 0;
 
-    li {
-      display: inline;
-      margin-left: 20px;
+      li {
+          display: inline;
+          margin-left: 20px;
 
-      a {
-        text-decoration: none;
-        color: black;
-        font-size: 24px;
+          a {
+              text-decoration: none;
+              color: black;
+              font-size: 24px;
 
-        &:hover {
-          text-decoration: underline;
-        }
+              &:hover {
+                  text-decoration: underline;
+              }
+          }
       }
-    }
   }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
   nav {
-    ul {
-      li {
-        margin-left: 10px;
+      ul {
+          li {
+              margin-left: 10px;
 
-        a {
-          text-transform: uppercase;
-          font-size: 14px;
-        }
+              a {
+                  text-transform: uppercase;
+                  font-size: 14px;
+              }
+          }
       }
-    }
   }
 
   header {
-    img {
-      width: 115px;
-    }
+      img {
+          width: 115px;
+      }
   }
 }

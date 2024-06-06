@@ -6,6 +6,40 @@ body {
   margin: 0 auto;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -14,7 +48,7 @@ body {
   position: relative; /* Essentiel pour positionner le pseudo-élément */
   background: url("../../src/app/assets/banner.svg") center/cover no-repeat;
   height: 200px;
-  width: 90%;
+  width: 100%;
   border-radius: 20px;
   margin: auto;
   display: flex;
@@ -24,6 +58,12 @@ body {
   overflow: hidden; /* Pour que le voile reste à l'intérieur des bordures arrondies */
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   z-index: 2; /* Pour que le contenu reste en-dessous du pseudo-élément */
+}
+.hero.about-hero {
+  background: url("../../src/app/assets/about-banner.svg") center/cover no-repeat;
+}
+.hero.about-hero::before {
+  background: rgba(0, 0, 0, 0.2);
 }
 .hero::before {
   content: ""; /* Pour que le pseudo-élément s'affiche */
@@ -51,6 +91,86 @@ body {
     margin-left: 20px;
   }
 }
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+  nav ul li {
+    margin-left: 10px;
+  }
+  nav ul li a {
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  header img {
+    width: 115px;
+  }
+}
+.collapse {
+  margin: 10px 0;
+}
+.collapse .collapse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FF6060;
+  padding: 0 10px;
+  color: #FFFFFF;
+  border-radius: 10px;
+}
+.collapse .collapse-header h2 {
+  font-size: 20px;
+}
+.collapse .collapse-header .collapse-icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+.collapse .collapse-content {
+  padding: 15px;
+  background-color: #fbfbfb;
+}
+.collapse .collapse-content ul, .collapse .collapse-content ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+.collapse .collapse-content ul li, .collapse .collapse-content ol li {
+  padding-left: 0;
+}
+
+.equipments {
+  margin-top: 20px;
+}
+.equipments ul {
+  list-style: none;
+  padding: 0;
+}
+.equipments ul li {
+  background-color: #f1f1f1;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 767.98px) {
+  .collapse-container {
+    flex-direction: column;
+  }
+  .collapse-container .collapse {
+    width: 100%;
+  }
+}
+.collapse-container {
+  margin-top: 10px;
+  width: 90%;
+}
+.collapse-container.inline-style {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 100%;
+}
+.collapse-container.inline-style .collapse {
+  width: 100%;
+}
+
 .location-details-content {
   padding: 20px;
   width: 90%;
@@ -144,45 +264,21 @@ body {
     height: 50px;
   }
 }
-header {
+.collapse-container {
+  margin-top: 10px;
+}
+.collapse-container.column-style {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 40px;
+  justify-content: center;
+  margin: auto;
+}
+.collapse-container.column-style .collapse {
   width: 90%;
-  margin: 20px auto;
 }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-nav ul li {
-  display: inline;
-  margin-left: 20px;
-}
-nav ul li a {
-  text-decoration: none;
-  color: black;
-  font-size: 24px;
-}
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-  nav ul li {
-    margin-left: 10px;
-  }
-  nav ul li a {
-    text-transform: uppercase;
-    font-size: 14px;
-  }
-  header img {
-    width: 115px;
-  }
-}
 footer {
   display: flex;
   justify-content: center;
@@ -202,33 +298,31 @@ footer p {
   flex-wrap: wrap;
   justify-content: space-around;
   width: 90%;
+  margin: auto;
   background-color: #f6f6f6;
   padding: 20px;
   border-radius: 20px;
   box-sizing: border-box;
   color: #ffffff;
-  margin: 50px auto auto;
 }
 
-.locations-container .location-link {
-  display: flex;
+.location-link {
+  width: 30%;
   text-decoration: none;
+  color: inherit;
 }
 
 .location-card {
   display: flex;
   flex-direction: column;
-  width: 27%;
   cursor: pointer;
   margin: 20px 0;
   border-radius: 10px;
-  background-color: #FF6060;
   box-sizing: border-box;
 }
 .location-card img {
   max-width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
 }
 .location-card h2 {
   margin-left: 20px;
@@ -240,9 +334,6 @@ footer p {
   .locations-container {
     padding: 0;
     background-color: #ffffff;
-  }
-  .location-card {
-    flex-basis: 100%;
   }
 }
 .slideshow {
@@ -282,65 +373,6 @@ footer p {
   border-radius: 5px;
 }
 
-.collapse-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-.collapse-container .collapse {
-  margin: 10px 0;
-  width: 45%;
-}
-.collapse-container .collapse .collapse-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #FF6060;
-  padding: 0 10px;
-  color: #FFFFFF;
-  border-radius: 10px;
-}
-.collapse-container .collapse .collapse-header h2 {
-  font-size: 20px;
-}
-.collapse-container .collapse .collapse-header .collapse-icon {
-  font-size: 30px;
-  cursor: pointer;
-}
-.collapse-container .collapse .collapse-content {
-  padding: 15px;
-  background-color: #fbfbfb;
-}
-.collapse-container .collapse .collapse-content ul, .collapse-container .collapse .collapse-content ol {
-  list-style-type: none;
-  padding-left: 0;
-}
-.collapse-container .collapse .collapse-content ul li, .collapse-container .collapse .collapse-content ol li {
-  padding-left: 0;
-}
-
-.equipments {
-  margin-top: 20px;
-}
-.equipments ul {
-  list-style: none;
-  padding: 0;
-}
-.equipments ul li {
-  background-color: #f1f1f1;
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-@media (max-width: 767.98px) {
-  .collapse-container {
-    flex-direction: column;
-  }
-  .collapse-container .collapse {
-    width: 100%;
-  }
-}
 .rating-stars {
   display: flex;
   font-size: 1.5em;

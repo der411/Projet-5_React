@@ -1,7 +1,7 @@
 import React from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-const RatingStars = ({ rating }) => {
+function RatingStars({ rating }){
   const totalStars = 5;
 
   return (

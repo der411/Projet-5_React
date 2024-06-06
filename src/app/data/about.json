@@ -6,7 +6,17 @@
 	},
 	{
 		"id" : "2",
-		"title": "Toto",
+		"title": "Respect",
+		"content": "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et\ntoutes les informations sont régulièrement vérifiées par nos équipes."
+	},
+	{
+		"id" : "2",
+		"title": "Service",
+		"content": "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et\ntoutes les informations sont régulièrement vérifiées par nos équipes."
+	},
+	{
+		"id" : "2",
+		"title": "Sécurité",
 		"content": "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et\ntoutes les informations sont régulièrement vérifiées par nos équipes."
 	}
 ]

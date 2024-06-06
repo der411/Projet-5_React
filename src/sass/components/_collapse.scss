@@ -1,11 +1,7 @@
-.collapse-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
 
   .collapse {
       margin: 10px 0;
-      width: 45%;
+      
 
       .collapse-header {
           display: flex;
@@ -40,7 +36,6 @@
           }
       }
   }
-}
 
 .equipments {
   margin-top: 20px;

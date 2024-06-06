@@ -1,13 +1,21 @@
+import React from 'react';
+import Collapse from "../components/Collapse";
 import data from '../data/about.json';
-import Collapse  from "../components/Collapse";
+import '../../css/style.css'; 
+
+
+
 function About() {
     return (
-        data.map(item => {
-            return (
-                <Collapse key={item.id} item={item}/>
-            )
-        })
-    )
+
+        <div className="collapse-container column-style">
+            {data.map(item => (
+                <Collapse key={item.id} title={item.title} >
+                    {item.content}
+                </Collapse>
+            ))}
+        </div>
+    );
 }
 
 export default About;

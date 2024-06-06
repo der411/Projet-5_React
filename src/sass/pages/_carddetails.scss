@@ -1,3 +1,23 @@
+.collapse-container {
+    margin-top: 10px;
+    width: 90%;
+  
+    &.inline-style {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        width: 100%;
+        
+         
+        
+      .collapse {
+        width: 100%;
+      }
+    }
+  
+}
+
+
 
 .location-details-content {
   padding: 20px;

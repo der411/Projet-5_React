@@ -2,12 +2,13 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 @import "utils/_variables";
 @import "base/_base";
-@import 'pages/_home';
-@import 'pages/carddetails';
-@import 'components/header';
-@import 'components/footer';
-@import 'components/card';
-@import 'components/slideshow';
-@import 'components/collapse';
-@import 'components/ratingstars';
+@import 'pages/_home'; 
+@import 'components/_header';
+@import 'components/_collapse';
+@import 'pages/_carddetails';
+@import 'pages/_about';
+@import 'components/_footer';
+@import 'components/_card';
+@import 'components/_slideshow';
+@import 'components/_ratingstars';
 

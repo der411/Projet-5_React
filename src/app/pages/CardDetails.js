@@ -5,6 +5,7 @@ import Collapse from '../components/Collapse';
 import RatingStars from '../components/RatingStars';
 import data from '../data/data.json';
 import Error404 from "./Error404";
+import '../../css/style.css'; 
 
 function CardDetails() {
     const {id} = useParams();
@@ -56,7 +57,7 @@ function CardDetails() {
                         </div>
                     </div>
                 </div>
-                <div className="collapse-container">
+                <div className="collapse-container inline-style">
                     <Collapse title="Description">
                         <p>{house.description}</p>
                     </Collapse>

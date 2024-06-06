@@ -29,7 +29,8 @@ nav {
               color: black;
               font-size: 24px;
 
-              &:hover {
+              &:hover,
+              &.active{
                   text-decoration: underline;
               }
           }
@@ -42,7 +43,7 @@ body {
   }
   
   .hero {
-    position: relative; /* Essentiel pour positionner le pseudo-élément */
+    position: relative; /* Pour positionner le pseudo-élément */
     background: url('../../src/app/assets/banner.svg') center/cover no-repeat;
     height: 200px;
     width: 100%;
@@ -67,12 +68,12 @@ body {
   
     &::before {
         content: ""; /* Pour que le pseudo-élément s'affiche */
-        position: absolute; /* Positionnement par rapport au conteneur relatif */
+        position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.5); /* Couleur noire avec une opacité de 50% */
+        background: rgba(0, 0, 0, 0.5); /* Couleur noire opacité de 50% */
         border-radius: inherit; /* Hérite la bordure arrondie du parent */
     }
   

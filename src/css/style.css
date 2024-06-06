@@ -36,7 +36,7 @@ nav ul li a {
   color: black;
   font-size: 24px;
 }
-nav ul li a:hover {
+nav ul li a:hover, nav ul li a.active {
   text-decoration: underline;
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 .hero {
-  position: relative; /* Essentiel pour positionner le pseudo-élément */
+  position: relative; /* Pour positionner le pseudo-élément */
   background: url("../../src/app/assets/banner.svg") center/cover no-repeat;
   height: 200px;
   width: 100%;
@@ -67,12 +67,12 @@ body {
 }
 .hero::before {
   content: ""; /* Pour que le pseudo-élément s'affiche */
-  position: absolute; /* Positionnement par rapport au conteneur relatif */
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Couleur noire avec une opacité de 50% */
+  background: rgba(0, 0, 0, 0.5); /* Couleur noire opacité de 50% */
   border-radius: inherit; /* Hérite la bordure arrondie du parent */
 }
 .hero h1 {
@@ -277,6 +277,30 @@ body {
 }
 .collapse-container.column-style .collapse {
   width: 90%;
+}
+
+.error-404 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.error-404 h1 {
+  font-size: 350px;
+  color: #FF6060;
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+.error-404 p {
+  font-size: 40px;
+  color: #FF6060;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+.error-404 a {
+  text-decoration: underline;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 footer {

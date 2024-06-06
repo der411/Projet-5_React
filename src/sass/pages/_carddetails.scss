@@ -71,6 +71,7 @@
           .host-info {
               display: flex;
               align-items: center;
+              justify-content: flex-end;
               margin-bottom: 30px;
               margin-top: 10px;
 
@@ -82,7 +83,10 @@
 
               p {
                   color: $color-danger;
-                  margin-right: 20px;
+                  margin-right: 25px;
+                  width: 25%;
+                  text-align: right;
+                
               }
           }
 
@@ -96,8 +100,25 @@
 
 }
 
-/* Mobile styles */
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+    
+  }
+
+/* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+
+    .collapse-container {
+        margin-top: 10px;
+        width: 90%;
+      
+        &.inline-style {
+            
+            flex-direction: column;
+            gap: 40px;
+        }
+      
+    }
   .location-details-content {
 
       .info-container {
@@ -109,6 +130,25 @@
 
           .info-left, .info-right {
               width: 100%;
+          }
+
+          .info-left{
+            .tags {
+                font-size: 12px;
+                gap: 5px;
+                
+  
+                .tag {
+  
+  
+                    background-color: $color-danger;
+                    color: #FFFFFF;
+                    font-weight: bold;
+                    border-radius: 10px;
+                    padding: 5px 10px;
+  
+                }
+            }
           }
 
           .info-right {
@@ -123,7 +163,6 @@
               }
 
               .rating {
-                  margin-left: 10px;
 
                   .fa-star {
                       font-size: 0.7em;
@@ -135,6 +174,7 @@
                       width: 50px;
                       height: 50px;
                   }
+                 
               }
           }
       }

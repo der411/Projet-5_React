@@ -38,12 +38,21 @@
   }
 }
 
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+  .location-link {
+    width: 45%;
+  }
+}
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
   .locations-container {
       padding: 0;
       background-color: #ffffff;
+  }
+  .location-link {
+    width: 100%;
   }
 
 }

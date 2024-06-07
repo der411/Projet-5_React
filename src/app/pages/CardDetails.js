@@ -42,8 +42,8 @@ function CardDetails() {
                         <h1>{house.title}</h1>
                         <div className="location">{house.location}</div>
                         <div className="tags">
-                            {house.tags.map(tag => (
-                                <span key={tag} className="tag">{tag}</span>
+                            {house.tags.map((tag,index) => (
+                                <span key={index} className="tag">{tag}</span>
                             ))}
                         </div>
                     </div>
@@ -63,8 +63,8 @@ function CardDetails() {
                     </Collapse>
                     <Collapse title="Équipements">
                         <ul>
-                            {house.equipments.map(equipment => (
-                                <li key={equipment}>{equipment}</li>
+                            {house.equipments.map((equipment,index) => (
+                                <li key={index}>{equipment}</li>
                             ))}
                         </ul>
                     </Collapse>

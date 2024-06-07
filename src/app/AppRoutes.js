@@ -13,7 +13,7 @@ const AppRoutes = () => {
         <>
         <Header/>
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/location/:id" element={<CardDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/error404" element={<Error404 />} />

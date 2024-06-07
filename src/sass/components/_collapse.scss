@@ -18,13 +18,28 @@
 
           .collapse-icon {
               font-size: 30px;
-              cursor: pointer;
-          }
+              cursor: pointer; 
+              transition: transform 1s ease;
+              .fas {
+                transition:transform 1000ms;
+                &:hover {
+                  transform: scale(1.15);
+              }
+            }
+        }
       }
 
       .collapse-content {
-          padding: 15px;
+          padding: 0 15px;
           background-color: #fbfbfb;
+          overflow: hidden;
+          max-height:0;
+          transition: max-height 0.7s ease-in-out, padding 0.7s ease-out;
+
+          &.open {
+            padding: 15px;
+            max-height: 500px;
+        }
 
           ul, ol {
               list-style-type: none;

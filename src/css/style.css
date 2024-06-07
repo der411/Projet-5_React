@@ -126,10 +126,24 @@ body {
 .collapse .collapse-header .collapse-icon {
   font-size: 30px;
   cursor: pointer;
+  transition: transform 1s ease;
+}
+.collapse .collapse-header .collapse-icon .fas {
+  transition: transform 1000ms;
+}
+.collapse .collapse-header .collapse-icon .fas:hover {
+  transform: scale(1.15);
 }
 .collapse .collapse-content {
-  padding: 15px;
+  padding: 0 15px;
   background-color: #fbfbfb;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.7s ease-in-out, padding 0.7s ease-out;
+}
+.collapse .collapse-content.open {
+  padding: 15px;
+  max-height: 500px;
 }
 .collapse .collapse-content ul, .collapse .collapse-content ol {
   list-style-type: none;
@@ -230,8 +244,8 @@ body {
 }
 .location-details-content .info-container .info-right .host-info p {
   color: #FF6060;
-  margin-right: 25px;
-  width: 25%;
+  margin-right: 20px;
+  width: 33%;
   text-align: right;
 }
 .location-details-content .info-container .info-right .rating {

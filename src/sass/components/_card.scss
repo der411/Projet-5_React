@@ -9,33 +9,32 @@
   border-radius: 20px;
   box-sizing: border-box;
   color: #ffffff;
-
 }
 
 .location-link {
   width: 30%;
   text-decoration: none;
   color: inherit;
-}
-
-.location-card {
-  display: flex;
-  flex-direction: column;
-  
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: block;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
   cursor: pointer;
   margin: 20px 0;
-  border-radius: 10px;
   box-sizing: border-box;
+}
 
-  img {
-    max-width: 100%;
-    border-radius: 10px;
-  }
-
-  h2 {
-    margin-left: 20px;
-    font-size: 16px;
-  }
+.location-link::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  padding: 5px;
+  font-weight: bold;
 }
 
 /* Medium devices (tablets, less/equal than 1024px) */
@@ -54,5 +53,4 @@
   .location-link {
     width: 100%;
   }
-
 }

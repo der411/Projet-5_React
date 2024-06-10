@@ -1,12 +1,10 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-function Card({location}) {
+function Card({accomodation}) {
     return (
-        <Link to={`/location/${location.id}`} className="location-link" style={{ backgroundImage: `url(${location.cover})` }} data-title={location.title} />
+        <Link to={`/accomodation/${accomodation.id}`} className="accomodation-link" style={{ backgroundImage: `url(${accomodation.cover})` }} data-title={accomodation.title} />
     );
 }
 
 export default Card;
-
-  

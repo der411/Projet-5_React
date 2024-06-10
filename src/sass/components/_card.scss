@@ -1,4 +1,4 @@
-.locations-container{
+.accomodations-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; 
@@ -11,7 +11,7 @@
   color: #ffffff;
 }
 
-.location-link {
+.accomodation-link {
   width: 30%;
   text-decoration: none;
   color: inherit;
@@ -27,7 +27,7 @@
   box-sizing: border-box;
 }
 
-.location-link::after {
+.accomodation-link::after {
   content: attr(data-title);
   position: absolute;
   bottom: 10px;
@@ -39,18 +39,18 @@
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-  .location-link {
+  .accomodation-link {
     width: 45%;
   }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-  .locations-container {
+  .accomodations-container {
       padding: 0;
       background-color: #ffffff;
   }
-  .location-link {
+  .accomodation-link {
     width: 100%;
   }
 }

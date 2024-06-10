@@ -1,8 +1,6 @@
 import React from 'react';
 import Collapse from "../components/Collapse";
 import data from '../data/about.json';
-import '../../css/style.css'; 
-
 
 
 function About() {

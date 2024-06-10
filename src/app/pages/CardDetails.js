@@ -2,10 +2,11 @@ import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import SlideShow from '../components/SlideShow';
 import Collapse from '../components/Collapse';
+import HostInfo from '../components/HostInfo';
 import RatingStars from '../components/RatingStars';
 import data from '../data/data.json';
 import Error404 from "./Error404";
-import '../../css/style.css'; 
+
 
 function CardDetails() {
     const {id} = useParams();
@@ -49,8 +50,7 @@ function CardDetails() {
                     </div>
                     <div className="info-right">
                         <div className="host-info">
-                            <p>{house.host.name}</p>
-                            <img src={house.host.picture} alt={house.host.name}/>
+                            <HostInfo host={house.host} />
                         </div>
                         <div className="rating">
                             <RatingStars rating={house.rating}/>

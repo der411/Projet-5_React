@@ -40,6 +40,22 @@
   }
 }
 
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+  .slideshow {
+    .slideshow-image {
+        height: 315px;
+    }
+
+    .slideshow-button {
+      font-size: 40px;
+    }
+    .slideshow-indicator {
+      display: none;
+  }
+}
+}
+/* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
   .slideshow {
       .slideshow-image {

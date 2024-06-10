@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../assets/logo-footer.svg';
 
 function Footer() {
+    
     return (
         <footer>
             <img className='logo-footer' src={logo} alt="Kasa Logo"/>

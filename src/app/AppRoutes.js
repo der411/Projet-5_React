@@ -11,14 +11,14 @@ const AppRoutes = () => {
     return (
         
         <>
-        <Header/>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/accomodation/:id" element={<CardDetails />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/error404" element={<Error404 />} />
-        </Routes>
-        <Footer/>
+          <Header/>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/accomodation/:id" element={<CardDetails />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/*" element={<Error404 />} />
+          </Routes>
+          <Footer/>
         </>
     );
 }

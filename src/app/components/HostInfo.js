@@ -1,7 +1,7 @@
-
 import React from 'react';
 
 function HostInfo({ host }) {
+
     return (
         <div className="host-info">
             <p>{host.name}</p>

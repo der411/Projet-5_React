@@ -1,109 +1,92 @@
 .collapse-container {
     margin-top: 10px;
     width: 90%;
-  
+
     &.inline-style {
         display: flex;
         flex-direction: row;
         gap: 40px;
         width: 100%;
-        
-         
-        
-      .collapse {
-        width: 100%;
-      }
+
+        .collapse {
+            width: 100%;
+        }
     }
-  
 }
-
-
 
 .location-details-content {
-  padding: 20px;
-  width: 90%;
-  margin: auto;
+    width: 90%;
+    margin: auto;
 
-  .info-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-top: 20px;
+    .info-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 20px;
 
-      .info-left {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
+        .info-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
 
-          h1 {
-              color: $color-danger;
-              margin-top: 10px;
-          }
+            h1 {
+                color: $color-danger;
+                margin-top: 10px;
+            }
 
-          .location {
-              font-weight: bold;
-              margin-top: 20px;
-          }
+            .location {
+                font-weight: bold;
+                margin-top: 20px;
+            }
 
-          .tags {
-              display: flex;
-              gap: 10px;
-              margin-top: 20px;
+            .tags {
+                display: flex;
+                gap: 10px;
+                margin-top: 20px;
 
-              .tag {
+                .tag {
+                    background-color: $color-danger;
+                    color: #FFFFFF;
+                    font-weight: bold;
+                    border-radius: 10px;
+                    padding: 5px 20px;
+                }
+            }
+        }
 
+        .info-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
 
-                  background-color: $color-danger;
-                  color: #FFFFFF;
-                  font-weight: bold;
-                  border-radius: 10px;
-                  padding: 5px 20px;
+            .host-info {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                margin-bottom: 30px;
+                margin-top: 10px;
 
-              }
-          }
-      }
+                img {
+                    border-radius: 50%;
+                    width: 70px;
+                    height: 70px;
+                }
 
-      .info-right {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
+                p {
+                    color: $color-danger;
+                    margin-right: 20px;
+                    width: 33%;
+                    text-align: right;
+                }
+            }
 
-          .host-info {
-              display: flex;
-              align-items: center;
-              justify-content: flex-end;
-              margin-bottom: 30px;
-              margin-top: 10px;
-
-              img {
-                  border-radius: 50%;
-                  width: 70px;
-                  height: 70px;
-              }
-
-              p {
-                  color: $color-danger;
-                  margin-right: 20px;
-                  width: 33%;
-                  text-align: right;
-                
-              }
-          }
-
-          .rating {
-              margin-top: 10px;
-              font-size: 18px;
-          }
-      }
-  }
-
-
+            .rating {
+                margin-top: 10px;
+                font-size: 18px;
+            }
+        }
+    }
 }
-
-/* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
-    
-  }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
@@ -111,72 +94,64 @@
     .collapse-container {
         margin-top: 10px;
         width: 90%;
-      
+
         &.inline-style {
-            
             flex-direction: column;
             gap: 40px;
         }
-      
     }
-  .location-details-content {
 
-      .info-container {
-          flex-direction: column;
+    .location-details-content {
+        .info-container {
+            flex-direction: column;
 
-          .location {
-              margin-bottom: 10px;
-          }
+            .location {
+                margin-bottom: 10px;
+            }
 
-          .info-left, .info-right {
-              width: 100%;
-          }
+            .info-left, .info-right {
+                width: 100%;
+            }
 
-          .info-left{
-            .tags {
-                font-size: 12px;
-                gap: 5px;
-                
-  
-                .tag {
-  
-  
-                    background-color: $color-danger;
-                    color: #FFFFFF;
-                    font-weight: bold;
-                    border-radius: 10px;
-                    padding: 5px 10px;
-  
+            .info-left {
+                .tags {
+                    font-size: 12px;
+                    gap: 5px;
+
+                    .tag {
+                        background-color: $color-danger;
+                        color: #FFFFFF;
+                        font-weight: bold;
+                        border-radius: 10px;
+                        padding: 5px 10px;
+                    }
                 }
             }
-          }
 
-          .info-right {
-              display: flex;
-              flex-direction: row-reverse;
-              justify-content: space-between;
-              align-items: center;
-              margin-top: 40px;
+            .info-right {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 40px;
 
-              .host-info, .rating {
-                  margin: 0;
-              }
+                .host-info, .rating {
+                    margin: 0;
+                }
 
-              .rating {
+                .rating {
+                    .fa-star {
+                        font-size: 0.7em;
+                    }
+                }
 
-                  .fa-star {
-                      font-size: 0.7em;
-                  }
-              }
-
-              .host-info {
-                  img {
-                      width: 50px;
-                      height: 50px;
-                  }
-                 
-              }
-          }
-      }
-  }
+                .host-info {
+                    img {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    }
 }

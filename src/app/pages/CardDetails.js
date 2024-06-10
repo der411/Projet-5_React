@@ -9,6 +9,7 @@ import Error404 from "./Error404";
 
 
 function CardDetails() {
+    
     const {id} = useParams();
     const [house, setHouse] = useState({
         cover: "",
@@ -24,13 +25,12 @@ function CardDetails() {
 
     useEffect(() => {
         const house = data.find((item) => item.id === id);
-        console.log(house);
         if (house) {
             setHouse(house);
         }
     }, [id]);
 
-    if (!house) {
+    if (house.id === undefined) {
         return <Error404/>;
     }
 

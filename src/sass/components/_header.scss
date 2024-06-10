@@ -1,54 +1,50 @@
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 40px;
-  width: 90%;
-  margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    width: 90%;
+    margin: auto;
 }
 
-.header{
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 20px;
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 nav {
-  ul {
-      list-style-type: none;
-      padding: 0;
+    ul {
+        list-style-type: none;
+        padding: 0;
 
-      li {
-          display: inline;
-          margin-left: 20px;
+        li {
+            display: inline;
+            margin-left: 20px;
 
-          a {
-              text-decoration: none;
-              color: black;
-              font-size: 24px;
+            a {
+                text-decoration: none;
+                color: black;
+                font-size: 24px;
 
-              &:hover,
-              &.active{
-                  text-decoration: underline;
-              }
-          }
-      }
-  }
+                &:hover,
+                &.active {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .hero {
+.hero {
     position: relative; /* Pour positionner le pseudo-élément */
-    background: url('../../src/app/assets/banner.svg') center/cover no-repeat;
+    background: url('../../src/app/assets/banner.webp') center/cover no-repeat;
     height: 200px;
-    width: 100%;
+    width: 90%;
     border-radius: 20px;
-    margin: auto;
+    margin: 0 auto 40px auto ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,14 +54,13 @@ body {
     z-index: 2; /* Pour que le contenu reste en-dessous du pseudo-élément */
 
     &.about-hero {
-        background: url('../../src/app/assets/about-banner.svg') center/cover no-repeat;
+        background: url('../../src/app/assets/about-banner.webp') center/cover no-repeat;
 
         &::before {
             background: rgba(0, 0, 0, 0.2);
         }
-        
     }
-  
+
     &::before {
         content: ""; /* Pour que le pseudo-élément s'affiche */
         position: absolute;
@@ -76,47 +71,44 @@ body {
         background: rgba(0, 0, 0, 0.5); /* Couleur noire opacité de 50% */
         border-radius: inherit; /* Hérite la bordure arrondie du parent */
     }
-  
+
     h1 {
         font-size: 2.5rem;
         text-align: center;
         z-index: 1; /* Pour que le contenu reste au-dessus du pseudo-élément */
     }
-  }
-  
-  /* Small devices (phones, less than 768px) */
-  @media (max-width: 767.98px) {
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
     .hero {
         border-radius: 10px;
-  
+
         h1 {
             text-align: left;
             margin-left: 20px;
         }
     }
-  }
-  
 
-/* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-  nav {
-      ul {
-          li {
-              margin-left: 10px;
+    nav {
+        ul {
+            li {
+                margin-left: 10px;
 
-              a {
-                  text-transform: uppercase;
-                  font-size: 14px;
-              }
-          }
-      }
-  }
+                a {
+                    text-transform: uppercase;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
 
-  header {
-        padding: 0 20px;
+    header {
+        padding: 20px;
         margin-bottom: 0;
-      img {
-          width: 115px;
-      }
-  }
+
+        img {
+            width: 115px;
+        }
+    }
 }

@@ -5,9 +5,7 @@ import logo from '../assets/logo.svg';
 function Header(){
     const location = useLocation();
     const navigate = useNavigate();
-    const isAboutPage = location.pathname === '/about';
-    const isLocationDetailsPage = location.pathname.startsWith('/location/');
-    const isErrorPage = location.pathname === '/error404'; 
+    
     const isActive = (path) => location.pathname === path ? 'active' : '';
     return (
         <header>
@@ -20,12 +18,6 @@ function Header(){
                     </ul>
                 </nav>
             </div>
-            {/* Affiche le .hero seulement si ce n'est ni une page de détail ni la page about ni la page 404 */}
-            {!isLocationDetailsPage && !isErrorPage && (
-                <div className={`hero ${isAboutPage ? "about-hero" : ""}`}>
-                    <h1>{isAboutPage ? "" : "Chez vous, partout et ailleurs"}</h1>
-                </div>
-            )}
         </header>
     );
 }

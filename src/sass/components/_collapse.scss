@@ -1,55 +1,76 @@
 
-  .collapse {
-      margin: 10px 0;
+@keyframes rotate-down {
+  to {
+    transform: rotate(0deg);
+}
+  from {
+      transform: rotate(180deg);
+  }
+  
+}
+
+@keyframes rotate-up {
+  from {
+      transform: rotate(-180deg);
+  }
+  to {
+      transform: rotate(0deg);
+  }
+}
+
+
+.collapse {
+  margin: 10px 0;
       
+    .collapse-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $color-danger;
+      padding: 0 10px;
+      color: #FFFFFF;
+      border-radius: 10px;
 
-      .collapse-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background-color: $color-danger;
-          padding: 0 10px;
-          color: #FFFFFF;
-          border-radius: 10px;
+        h2{
+          font-size: 20px;
+        }
+        .collapse-icon {
+          font-size: 30px;
+          cursor: pointer;
 
-          h2 {
-              font-size: 20px;
-          }
-
-          .collapse-icon {
-              font-size: 30px;
-              cursor: pointer; 
-              transition: transform 1s ease;
-              .fas {
-                transition:transform 1000ms;
-                &:hover {
-                  transform: scale(1.15);
-              }
+          .fas {
+            &.fa-chevron-up {
+              animation: rotate-up 0.7s ease-in-out;
             }
+            &.fa-chevron-down {
+                animation: rotate-down 0.7s ease-out;
+            }
+            
+        }
+    }
+}
+
+.collapse-content {
+    padding: 0 15px;
+    background-color: #fbfbfb;
+    overflow: hidden;
+    max-height:0;
+    transition: max-height 0.7s ease-in-out, padding 0.7s ease-out;
+
+    &.open {
+      padding: 15px;
+      max-height: 500px;
+    }
+
+    ul, ol {
+      list-style-type: none;
+      padding-left: 0;
+
+        li{
+            padding-left: 0;
         }
       }
-
-      .collapse-content {
-          padding: 0 15px;
-          background-color: #fbfbfb;
-          overflow: hidden;
-          max-height:0;
-          transition: max-height 0.7s ease-in-out, padding 0.7s ease-out;
-
-          &.open {
-            padding: 15px;
-            max-height: 500px;
-        }
-
-          ul, ol {
-              list-style-type: none;
-              padding-left: 0;
-
-              li {
-                  padding-left: 0;
-              }
-          }
-      }
+    }
   }
 
 .equipments {
@@ -65,16 +86,16 @@
           padding: 10px;
           border-radius: 5px;
       }
-  }
+   }
 }
 
-
-@media (max-width: 767.98px) {
-  .collapse-container {
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px){
+  .collapse-container{
       flex-direction: column;
 
-      .collapse {
+    .collapse{
           width: 100%;
-      }
+    }
   }
 }

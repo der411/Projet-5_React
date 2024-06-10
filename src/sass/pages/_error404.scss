@@ -1,25 +1,60 @@
-.error-404{
+.error-404 {
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 20px;
 
-    & h1{
-        font-size: 350px;
+    h1 {
+        font-size: 300px;
         color: $color-danger;
         margin-top: 5px;
         margin-bottom: 40px;
     }
-    & p{
-        font-size: 40px;
+
+    p {
+        font-size: 20px;
         color: $color-danger;
         margin-top: 0;
         margin-bottom: 60px;
     }
-    & a{
+
+    a {
         text-decoration: underline;
-        font-size: 25px;
+        font-size: 16px;
         margin-top: 20px;
         margin-bottom: 50px;
+        color: #000000;
     }
 
+
+    /* Medium devices (tablets, less/equal than 1024px) */
+    @media (max-width: 1024px) {
+        h1 {
+            font-size: 190px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        a {
+            font-size: 9px;
+        }
+    }
+
+    /* Small devices (phones, less than 768px) */
+    @media (max-width: 767.98px) {
+        h1 {
+            font-size: 100px;
+        }
+
+        p {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        a {
+            font-size: 12px;
+        }
+    }
 }

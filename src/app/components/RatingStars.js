@@ -1,15 +1,17 @@
 import React from 'react';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 
-function RatingStars({ rating }){
+
+function RatingStars({rating}){
+
+  // Nombre total d'étoiles
   const totalStars = 5;
 
   return (
-    <div className="rating-stars">
-      {[...Array(totalStars)].map((star, index) => (
+      <div className="rating-stars">
+        {[...Array(totalStars)].map((_, index) => (
         <span key={index} className={`fa-star ${index < rating ? 'fas' : 'far empty'}`}></span>
-      ))}
-    </div>
+        ))}
+      </div>
   );
 };
 

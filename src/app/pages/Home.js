@@ -6,8 +6,11 @@ import data from '../data/data.json';
 
 function Home() {
 
+    // URL actuelle dans l'application
     const location = useLocation();
-    const isHomePage = location.pathname === '/';
+
+    // Vérifie si l'emplacement actuel est la page d'accueil
+    const isHomePage = location.pathname === '/'; 
     
     return (
         <>

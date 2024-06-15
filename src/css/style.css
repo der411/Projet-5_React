@@ -103,6 +103,7 @@ nav ul li a:hover, nav ul li a.active {
     width: 115px;
   }
 }
+/*Keyframes pour créer les animations du chevron*/
 @keyframes rotate-down {
   to {
     transform: rotate(0deg);
@@ -139,17 +140,17 @@ nav ul li a:hover, nav ul li a.active {
   cursor: pointer;
 }
 .collapse .collapse-header .collapse-icon .fas.fa-chevron-up {
-  animation: rotate-up 0.7s ease-in-out;
+  animation: rotate-up 0.6s cubic-bezier(0.1, 0.7, 1, 0.1);
 }
 .collapse .collapse-header .collapse-icon .fas.fa-chevron-down {
-  animation: rotate-down 0.7s ease-out;
+  animation: rotate-down 0.6s cubic-bezier(0.1, 0.7, 1, 0.1);
 }
 .collapse .collapse-content {
   padding: 0 15px;
   background-color: #fbfbfb;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.7s ease-in-out, padding 0.7s ease-out;
+  transition: max-height 0.6s cubic-bezier(0.1, 0.7, 1, 0.1), padding 0.6s cubic-bezier(0.1, 0.7, 1, 0.1);
 }
 .collapse .collapse-content.open {
   padding: 15px;
@@ -161,20 +162,6 @@ nav ul li a:hover, nav ul li a.active {
 }
 .collapse .collapse-content ul li, .collapse .collapse-content ol li {
   padding-left: 0;
-}
-
-.equipments {
-  margin-top: 20px;
-}
-.equipments ul {
-  list-style: none;
-  padding: 0;
-}
-.equipments ul li {
-  background-color: #f1f1f1;
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 5px;
 }
 
 /* Small devices (phones, less than 768px) */
@@ -233,7 +220,7 @@ nav ul li a:hover, nav ul li a.active {
   color: #FFFFFF;
   font-weight: bold;
   border-radius: 10px;
-  padding: 5px 20px;
+  padding: 5px 10px;
 }
 .location-details-content .info-container .info-right {
   display: flex;
@@ -260,7 +247,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 .location-details-content .info-container .info-right .rating {
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /* Small devices (phones, less than 768px) */
@@ -283,7 +270,7 @@ nav ul li a:hover, nav ul li a.active {
     width: 100%;
   }
   .location-details-content .info-container .info-left .tags {
-    font-size: 12px;
+    font-size: 10px;
     gap: 5px;
   }
   .location-details-content .info-container .info-left .tags .tag {
@@ -418,13 +405,10 @@ footer p {
   background-size: cover;
   background-position: center;
   position: relative;
-  display: block;
   height: 300px;
   border-radius: 10px;
-  overflow: hidden;
   cursor: pointer;
   margin: 20px 0;
-  box-sizing: border-box;
 }
 .accomodation-link::after {
   content: attr(data-title);

@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
 
 function Slideshow ({ pictures }) {
+
+  // Initialisation de l'état local de l'index courant
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = () => {
+  // Fonction pour passer à la slide suivante
+  function nextSlide(){
     setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.length);
   };
 
-  const prevSlide = () => {
+  // Fonction pour passer à la slide précédente
+  function prevSlide(){
     setCurrentIndex((prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length);
   };
+
 
   return (
     <div className="slideshow">

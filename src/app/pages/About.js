@@ -5,7 +5,11 @@ import { useLocation } from 'react-router-dom';
 
 
 function About() {
+
+    // URL actuelle dans l'application
     const location = useLocation();
+
+    // Vérifie si l'emplacement actuel est la page about
     const isAboutPage = location.pathname === '/about';
     
     return (

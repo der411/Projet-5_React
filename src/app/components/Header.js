@@ -3,10 +3,18 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.svg';
 
 function Header(){
+
+    // URL actuelle dans l'application
     const location = useLocation();
+
+    // Vérifie si l'emplacement actuel pour ajouter la classe active
+    const isActive = (path) => location.pathname === path ? 'active' : '';
+
+    // Hook de navigation
     const navigate = useNavigate();
     
-    const isActive = (path) => location.pathname === path ? 'active' : '';
+    
+
     return (
         <header>
             <div className='header'>

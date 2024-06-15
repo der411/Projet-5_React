@@ -23,13 +23,11 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  display: block;
   height: 300px;
   border-radius: 10px;
-  overflow: hidden;
   cursor: pointer;
   margin: 20px 0;
-  box-sizing: border-box;
+  
 
   &::after {
     content: attr(data-title);

@@ -10,7 +10,10 @@ import Error404 from "./Error404";
 
 function CardDetails() {
     
-    const {id} = useParams();
+    // Récupération de l'ID du logement à affiher depuis l'URL
+    const {id} = useParams(); 
+
+    // Initialisation de l'état local du logement
     const [house, setHouse] = useState({
         cover: "",
         title: "",
@@ -23,6 +26,7 @@ function CardDetails() {
         tags: []
     });
 
+    // Récupération et mise à jour des données du logement à afficher
     useEffect(() => {
         const house = data.find((item) => item.id === id);
         if (house) {
@@ -35,7 +39,7 @@ function CardDetails() {
     }
 
     return (
-        <div className="location-details">
+        
             <div className="location-details-content">
                 <SlideShow pictures={house.pictures}/>
                 <div className="info-container">
@@ -70,7 +74,7 @@ function CardDetails() {
                     </Collapse>
                 </div>
             </div>
-        </div>
+        
     );
 }
 

@@ -11,6 +11,7 @@ function Header(){
     const isActive = (path) => location.pathname === path ? 'active' : '';
 
     return(
+
         <header>
             <div className='header'>
                 <Link to="/"><img src={logo} alt="Kasa Logo"/></Link>

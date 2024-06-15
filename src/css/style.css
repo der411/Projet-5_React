@@ -257,8 +257,13 @@ nav ul li a:hover, nav ul li a.active {
   text-align: right;
 }
 .location-details-content .info-container .info-right .rating {
+<<<<<<< HEAD
   margin-top: 20px;
   font-size: 14px;
+=======
+  margin-top: 10px;
+  font-size: 16px;
+>>>>>>> 0899a71 (Ajout de commentaires et vérifications avant soutenance)
 }
 
 /* Small devices (phones, less than 768px) */

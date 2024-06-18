@@ -13,3 +13,10 @@ footer {
     }
   }
   
+  /* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+  
+  footer{
+    height: 180px;
+  }
+}

@@ -31,18 +31,19 @@
 
             h1 {
                 color: $color-danger;
-                margin-top: 10px;
+                margin: 10px 0 0 0;
             }
 
             .location {
                 font-weight: bold;
-                margin-top: 20px;
+                margin-top: 5px;
             }
 
             .tags {
                 display: flex;
                 gap: 10px;
-                margin-top: 20px;
+                margin-top: 26px;
+                margin-bottom: 2px;
 
                 .tag {
                     background-color: $color-danger;
@@ -63,8 +64,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
-                margin-bottom: 30px;
-                margin-top: 10px;
+                margin: 5px 0 0 0;
 
                 img {
                     border-radius: 50%;
@@ -81,8 +81,8 @@
             }
 
             .rating {
-                margin-top: 10px;
-                font-size: 16px;
+                margin-top: 20px;
+                font-size: 14px;
             }
         }
     }
@@ -133,7 +133,7 @@
                 flex-direction: row-reverse;
                 justify-content: space-between;
                 align-items: center;
-                margin-top: 40px;
+                margin-top: 20px;
 
                 .host-info, .rating {
                     margin: 0;

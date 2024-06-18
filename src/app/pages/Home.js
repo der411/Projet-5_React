@@ -16,7 +16,7 @@ function Home() {
         <>
             {isHomePage && (
                 <div className="hero">
-                    <h1>Chez vous, partout et ailleurs</h1>
+                    <h1>Chez vous,<span className="mobile-break"><br/></span>partout et ailleurs</h1>
                 </div>
             )}
             <div className="home">

@@ -78,15 +78,26 @@ nav ul li a:hover, nav ul li a.active {
   text-align: center;
   z-index: 1; /* Pour que le contenu reste au-dessus du pseudo-élément */
 }
+.hero h1 .mobile-break {
+  display: none;
+}
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
   .hero {
+    height: 160px;
     border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
   }
   .hero h1 {
     text-align: left;
     margin-left: 20px;
+    font-size: 1.8rem;
+    line-height: 0.5;
+  }
+  .hero h1 .mobile-break {
+    display: block;
   }
   nav ul li {
     margin-left: 10px;
@@ -204,16 +215,17 @@ nav ul li a:hover, nav ul li a.active {
 }
 .location-details-content .info-container .info-left h1 {
   color: #FF6060;
-  margin-top: 10px;
+  margin: 10px 0 0 0;
 }
 .location-details-content .info-container .info-left .location {
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 .location-details-content .info-container .info-left .tags {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 26px;
+  margin-bottom: 2px;
 }
 .location-details-content .info-container .info-left .tags .tag {
   background-color: #FF6060;
@@ -231,8 +243,7 @@ nav ul li a:hover, nav ul li a.active {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-bottom: 30px;
-  margin-top: 10px;
+  margin: 5px 0 0 0;
 }
 .location-details-content .info-container .info-right .host-info img {
   border-radius: 50%;
@@ -246,8 +257,8 @@ nav ul li a:hover, nav ul li a.active {
   text-align: right;
 }
 .location-details-content .info-container .info-right .rating {
-  margin-top: 10px;
-  font-size: 16px;
+  margin-top: 20px;
+  font-size: 14px;
 }
 
 /* Small devices (phones, less than 768px) */
@@ -285,7 +296,7 @@ nav ul li a:hover, nav ul li a.active {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
   }
   .location-details-content .info-container .info-right .host-info, .location-details-content .info-container .info-right .rating {
     margin: 0;
@@ -313,7 +324,18 @@ nav ul li a:hover, nav ul li a.active {
 .collapse-container.column-style .collapse {
   width: 90%;
 }
+@media (max-width: 768px) {
+  .collapse-container.column-style .collapse {
+    width: 100%;
+  }
+}
 
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .collapse-container.collapse {
+    width: 100%;
+  }
+}
 .error-404 {
   display: flex;
   align-items: center;
@@ -379,6 +401,12 @@ footer p {
   color: white;
 }
 
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+  footer {
+    height: 180px;
+  }
+}
 .accomodations-container {
   display: flex;
   flex-wrap: wrap;
@@ -498,7 +526,7 @@ footer p {
   border: none;
 }
 .rating-stars .fa-star {
-  margin-right: 5px;
+  margin-right: 7px;
 }
 .rating-stars .fas {
   color: #FF6060;

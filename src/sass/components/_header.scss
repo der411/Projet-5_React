@@ -76,17 +76,29 @@ nav {
         font-size: 2.5rem;
         text-align: center;
         z-index: 1; /* Pour que le contenu reste au-dessus du pseudo-élément */
+        .mobile-break {
+            display: none;
+        }
     }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     .hero {
+        height: 160px;
         border-radius: 10px;
+        display: flex;
+        justify-content: flex-start;
 
         h1 {
             text-align: left;
             margin-left: 20px;
+            font-size: 1.8rem;
+            line-height: 0.5;
+
+            .mobile-break {
+                display: block;
+            }
         }
     }
 

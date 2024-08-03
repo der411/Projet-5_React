@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Kasa, agence immobilière ![React](https://img.shields.io/badge/-React-blue) ![JavaScript](https://img.shields.io/badge/-JavaScript-yellow) ![Sass](https://img.shields.io/badge/-Sass-cc6699?logo=sass&logoColor=white)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Kasa est une application web permettant aux utilisateurs de trouver des logements. Ce projet est une refonte complète de l'ancienne version, passant d'une stack ASP.NET à une stack JavaScript moderne avec React pour le front-end et NodeJS pour le back-end.
 
-In the project directory, you can run:
+## Aperçu :art:
+![Aperçu de la page](https://live.staticflickr.com/65535/53899913279_7fef1effbf_n.jpg)
 
-### `yarn start`
+## Installation :rocket:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Clonez le dépôt :**
+   ```bash
+   git clone git@github.com:der411/Projet-5_React.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Installez les dépendances :**
+   npm install
+   
+3. **Démarrez l'application :**
+   npm start
 
-### `yarn test`
+## Fonctionnalités
+ - Recherche de logements : Navigation et visualisation des annonces de logements.
+ - Galerie d'images : Défilement des images avec des fonctionnalités de navigation intuitive (retour à la première image depuis la dernière et vice versa).
+ - Composants collapsibles : Les sections collapsibles (Collapse) peuvent être ouvertes et fermées par l'utilisateur.
+ - Responsive Design : Interface adaptative pour différents appareils (desktop, tablette, mobile).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Utilisées
+- React : Pour le développement des composants de l'interface utilisateur.
+- React Router : Pour la gestion des routes et de la navigation.
+- CSS : Pour la stylisation de l'interface utilisateur.
+- Sass : Pour l'écriture de styles CSS modulaires et maintenables.
+- Create React App : Pour le développement de l'application.
 
-### `yarn build`
+## Contraintes Techniques et Fonctionnelles
+- **Galerie d'images :**
+  - Navigation cyclique des images (de la première à la dernière et vice versa).
+  - Boutons "Suivant" et "Précédent" et numérotation sont masqués si une seule image est présente.
+  - Hauteur fixe de la galerie, les images sont centrées et coupées si nécessaire.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Collapse :**
+  - Initialement fermés à l'ouverture de la page.
+  - Les sections s'ouvrent et se ferment au clic de l'utilisateur.

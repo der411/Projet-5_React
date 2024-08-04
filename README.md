@@ -13,10 +13,10 @@ Kasa est une application web permettant aux utilisateurs de trouver des logement
    git clone git@github.com:der411/Projet-5_React.git
 
 2. **Installez les dépendances :**
-   npm install
+   ```npm install```
    
 3. **Démarrez l'application :**
-   npm start
+   ```npm start```
 
 ## Fonctionnalités
  - Recherche de logements : Navigation et visualisation des annonces de logements.
@@ -25,11 +25,11 @@ Kasa est une application web permettant aux utilisateurs de trouver des logement
  - Responsive Design : Interface adaptative pour différents appareils (desktop, tablette, mobile).
 
 ## Technologies Utilisées
-- React : Pour le développement des composants de l'interface utilisateur.
-- React Router : Pour la gestion des routes et de la navigation.
-- CSS : Pour la stylisation de l'interface utilisateur.
-- Sass : Pour l'écriture de styles CSS modulaires et maintenables.
-- Create React App : Pour le développement de l'application.
+- **React :** Pour le développement des composants de l'interface utilisateur.
+- **React Router :** Pour la gestion des routes et de la navigation.
+- **CSS :** Pour la stylisation de l'interface utilisateur.
+- **Sass :** Pour l'écriture de styles CSS modulaires et maintenables.
+- **Create React App :** Pour le développement de l'application.
 
 ## Contraintes Techniques et Fonctionnelles
 - **Galerie d'images :**

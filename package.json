@@ -2,11 +2,13 @@
   "name": "kasa",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://der411.github.io/Projet-5_React/",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "kasa": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1",
@@ -16,6 +18,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "sass": "sass ./src/sass/main.scss ./src/css/style.css  -w --style compressed"
   },
   "browserslist": {
@@ -31,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "prettier": "^3.2.5"
   }
 }

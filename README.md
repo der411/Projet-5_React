@@ -40,4 +40,18 @@ C'est une application qui permet aux utilisateurs de consulter des logements et 
  
 - **Le Hook useLocation de React Router :**
   - Utilisé pour lire l'URL actuelle et réagir aux changements de chemin dans l'application. Par exemple, pour l'affichage conditionnel de la bannière en fonction de la route active.
-    
+
+# Contraintes technique et Fonctionnelles
+
+- **Eléments dépliables (Collapse) :**
+  - Utilisation du Hook useState pour gérer l'état isOpen qui determine si le contenu est affiché ou masqué.
+  - Une fonction toggleCollapse pour inverser les valeurs de isOpen lors du clique sur le chevron, permettant de le déplier ou replier.
+  - Une condition d'affichage du contenu si isOpen prend comme valeur true. Sinon le contenu est caché.
+  - Affichage d'une icone de chevron qui change de direction (up/down) en fonction de l'état.
+
+- **Caroussel d'images (SlideShow) :**
+  - Utilisation du Hook useState pour gérer l'état currentIndex, qui représente l'index de l'image actuellement affichée dans le diaporama.
+  - Deux fonctions, nextSlide et prevSlide permettent de passer aux images suivantes ou précédentes avec un comportement de boucle grace au modulo.
+  - Affichage des boutons de navigation seulement si la galerie contient plus d'une image. Et un indicateur de position pour indiquer l'image actuellement affichée par rapport au nombre total d'image (par exemple, '1/5')
+  - Affichage de l'image à l'index currentIndex de la liste pictures. L'image change en fonction de la navigation de l'utilisateur.
+

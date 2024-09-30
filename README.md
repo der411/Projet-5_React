@@ -17,13 +17,19 @@ C'est une application qui permet aux utilisateurs de consulter des logements et 
 
 # Installation
 1. Clonez le dépôt
-``` git clone git@github.com:der411/Projet-5_React.git```
+```sh
+git clone git@github.com:der411/Projet-5_React.git
+```
 
-2. Installez les dépendances
-   ```npm install```
+3. Installez les dépendances
+   ```sh
+   npm install
+   ```
 
-3. Démarrez l'application 🚀
-   ```npm start```
+5. Démarrez l'application 🚀
+   ```sh
+   npm start
+   ```
 
 # Outils
  - **Props :**

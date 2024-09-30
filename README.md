@@ -17,7 +17,7 @@ C'est une application qui permet aux utilisateurs de consulter des logements et 
 
 # Installation
 1. Clonez le dépôt
-``` git clone git@github.com/Projet-6_Express_MongoDB.git```
+``` git clone git@github.com:der411/Projet-5_React.git```
 
 2. Installez les dépendances
    ```npm install```

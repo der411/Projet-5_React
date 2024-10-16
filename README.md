@@ -60,4 +60,3 @@ git clone git@github.com:der411/Projet-5_React.git
   - Deux fonctions, nextSlide et prevSlide permettent de passer aux images suivantes ou précédentes avec un comportement de boucle grace au modulo.
   - Affichage des boutons de navigation seulement si la galerie contient plus d'une image. Et un indicateur de position pour indiquer l'image actuellement affichée par rapport au nombre total d'image (par exemple, '1/5')
   - Affichage de l'image à l'index currentIndex de la liste pictures. L'image change en fonction de la navigation de l'utilisateur.
-

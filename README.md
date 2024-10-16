@@ -47,7 +47,7 @@ git clone git@github.com:der411/Projet-5_React.git
 - **Le Hook useLocation de React Router :**
   - Utilisé pour lire l'URL actuelle et réagir aux changements de chemin dans l'application. Par exemple, pour l'affichage conditionnel de la bannière en fonction de la route active.
 
-# Contraintes technique et Fonctionnelles
+# Contraintes techniques et fonctionnelles
 
 - **Eléments dépliables (Collapse) :**
   - Utilisation du Hook useState pour gérer l'état isOpen qui determine si le contenu est affiché ou masqué.

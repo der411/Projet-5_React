@@ -1,34 +1,17 @@
-# Utilisation d'une image Node pour construire l'application React
-image: node:16
+# Utilisation d'une image de base pour la déploiement de contenu statique
+image: busybox
 
 # Définition des étapes du pipeline
 stages:
-  - build
   - deploy
-
-# Étape de construction de l'application
-build:
-  stage: build
-  script:
-    # Installation des dépendances
-    - npm install
-    # Construction de l'application React
-    - npm run build
-  artifacts:
-    paths:
-      # Les fichiers construits qui seront utilisés pour le déploiement
-      - build
-  only:
-    - main  # Ne construit que sur la branche principale (à adapter si nécessaire)
 
 # Étape de déploiement sur GitLab Pages
 pages:
   stage: deploy
   script:
-    # Déplacement des fichiers du build vers le répertoire public
-    - mv build public
+    - echo "Le site sera déployé à l'adresse $CI_PAGES_URL"
   artifacts:
     paths:
-      - public
-  only:
-    - main  # Ne déploie que depuis la branche principale (à adapter si nécessaire)
+      - public  # Le dossier "public" contient les fichiers HTML, CSS, etc.
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH  # Ne déploie que si c'est la branche principale (master/main)
